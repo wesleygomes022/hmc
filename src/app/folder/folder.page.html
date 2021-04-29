@@ -1,21 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="toolbar">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <img src="assets/LOGO.png" class="logo ion-image-center">
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <img src="assets/home3.jpeg" class="imagem">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/ck.jpg" class="imagem2"  [routerLink]="['/produto1']">
+        <ion-text class="text2"><strong>Calvin Klein One<br></strong></ion-text>
+        <ion-text class="text2">REF: 1723693<br></ion-text>
+        <ion-text>R$ 50,00</ion-text>
+      </ion-col>
+      <ion-col>
+        <img src="assets/produto2.jpg" class="imagem2"><br>
+        <ion-text><strong>212 VIP Rose<br></strong></ion-text>
+        <ion-text class="text2">REF: 2738462<br></ion-text>
+        <ion-text>R$ 60,00</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
