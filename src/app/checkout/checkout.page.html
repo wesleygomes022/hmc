@@ -1,9 +1,44 @@
-<ion-header>
+<ion-header [translucent]="true" class="toolbar">
   <ion-toolbar>
-    <ion-title>checkout</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/LOGO.png" class="logo ion-image-center">
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <ion-text class="text1"><strong>Batom Perfeito Boticario<br></strong></ion-text>
+  <ion-text class="text2">REF: 1723693<br></ion-text>
+  <br>
+  <ion-text class="text3"><strong>R$80,00<br></strong></ion-text>
+  <br>
+  <ion-text class="text3">Quantidade<br></ion-text>
+  <img src="assets/Screenshot_6.png" class="imagem-batom">
+  <textarea class="textarea1" cols="8" rows="2"></textarea>
+  
+  <br>
+  <br>
+  <ion-text class="text4">Número do Cartão<br></ion-text>
+  <textarea class="textarea2" cols="30" rows="1"></textarea>
+  <br>
 
-<ion-content>
+  <img src="assets/visa1.png" class="visa">
+  <img src="assets/elo.png" class="elo">
+  <img src="assets/mastercard.png" class="mastercard">
+  <img src="assets/amex.png" class="amex">
+  <img src="assets/hiper.png" class="hiper">
 
-</ion-content>
+  <br>
+  <br>
+  <br>
+  <ion-text class="text5">Frete<br></ion-text>
+  <textarea class="textarea2" cols="30" rows="1"></textarea>
+
+  <ion-button class="finalizar-compra" color="dark">Finalizar Compra</ion-button>
+
+
