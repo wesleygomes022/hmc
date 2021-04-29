@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/folder"></ion-back-button>
+      <ion-back-button defaultHref="folder"></ion-back-button>
     </ion-buttons>
-    <img src="assets/LOGO.png" class="logo ion-image-center">
+    <img src="assets/LOGO.png" class="logo ion-image-center" [routerLink]="['/folder']">
     <ion-icon name="search-outline" size="large" class="searchIcon"></ion-icon>
     <ion-icon name="storefront-outline" size="large" class="checkoutIcon" [routerLink]="['/product-list']"></ion-icon>
   </ion-toolbar>
@@ -12,8 +12,8 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <img src="assets/ck.jpg">
-      <ion-card-title>Calvin Klein One</ion-card-title>
+      <img src="assets/produto2.jpg">
+      <ion-card-title>212 VIP Rose</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
@@ -27,7 +27,7 @@
   </div>
 
   <br>
-  <input type="text" value="1" class="inputProduto1">
+  <input type="number" value="1" class="inputProduto1">
 
   <div class="buttonProduto1">
     <ion-button color="dark" size="large" [routerLink]="['/checkout']">Comprar</ion-button>
