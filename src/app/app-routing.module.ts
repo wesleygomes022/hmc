@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'produto2',
     loadChildren: () => import('./produto2/produto2.module').then( m => m.Produto2PageModule)
+  },  {
+    path: 'local',
+    loadChildren: () => import('./local/local.module').then( m => m.LocalPageModule)
   }
+
 ];
 
 @NgModule({
