@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Loader } from "@googlemaps/js-api-loader"
 
 @Component({
   selector: 'app-local',
@@ -13,3 +14,17 @@ export class LocalPage implements OnInit {
   }
 
 }
+
+let map;
+
+const loader = new Loader({
+  apiKey: "AIzaSyAbPVxcbrftQmbsXTWpbEwZgShLtJIP6MA",
+  version: "weekly",
+});
+
+loader.load().then(() => {
+  map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+    center: {  lat: -23.471965427996505, lng: -46.73679764945249 },
+    zoom: 8,
+  });
+});
