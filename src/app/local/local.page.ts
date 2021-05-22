@@ -1,19 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Loader } from "@googlemaps/js-api-loader"
+import { LocalCepService } from '../local-cep.service';
+
+export interface Revendedor{
+  cep: string;
+  name: string;
+  phone: string;
+  distance: string;
+}
 
 @Component({
   selector: 'app-local',
   templateUrl: './local.page.html',
   styleUrls: ['./local.page.scss'],
 })
-export class LocalPage implements OnInit {
 
-  constructor() { }
+export class LocalPage {
+  public revendedores: Revendedor [] = this.localCepService.revendedores;
+  
 
-  ngOnInit() {
-  }
+  constructor(private localCepService: LocalCepService) { }
 
 }
+
 
 let map;
 
