@@ -29,6 +29,10 @@ const routes: Routes = [
   },  {
     path: 'local',
     loadChildren: () => import('./local/local.module').then( m => m.LocalPageModule)
+  },
+  {
+    path: 'product-list2',
+    loadChildren: () => import('./product-list2/product-list2.module').then( m => m.ProductList2PageModule)
   }
 
 ];

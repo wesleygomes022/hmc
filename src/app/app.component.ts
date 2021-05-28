@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
+
     { title: 'Perfumaria'},
     { title: 'Perfumaria Masculina', url: '/folder/PerfumariaMasculina' },
     { title: 'Perfumaria Feminina', url: '/folder/PerfumariaFeminina' },
