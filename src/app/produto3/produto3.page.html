@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/folder"></ion-back-button>
+    </ion-buttons>
+    <img src="assets/LOGO.png" class="logo ion-image-center">
+    <ion-icon name="navigate-outline" size="large" class="searchIcon" [routerLink]="['/local']"></ion-icon>
+    <ion-icon name="bag-handle-outline" size="large" class="checkoutIcon" [routerLink]="['/product-list']"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/aroma2.jpg">
+      <ion-card-title>Aromatizador Lavanda</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      REF: 9922774<br>
+      R$ 30,00<br>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="textoProduto1">
+    <ion-label>Quantidade</ion-label>
+  </div>
+
+  <br>
+  <input type="text" value="1" class="inputProduto1">
+
+  <div class="buttonProduto1">
+    <ion-button color="dark" size="large" [routerLink]="['/checkout-aroma']">Comprar</ion-button>
+  </div>
+
+</ion-content>

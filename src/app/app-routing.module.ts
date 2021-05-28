@@ -33,6 +33,18 @@ const routes: Routes = [
   {
     path: 'product-list2',
     loadChildren: () => import('./product-list2/product-list2.module').then( m => m.ProductList2PageModule)
+  },
+  {
+    path: 'produto3',
+    loadChildren: () => import('./produto3/produto3.module').then( m => m.Produto3PageModule)
+  },
+  {
+    path: 'checkout-aroma',
+    loadChildren: () => import('./checkout-aroma/checkout-aroma.module').then( m => m.CheckoutAromaPageModule)
+  },
+  {
+    path: 'produto4',
+    loadChildren: () => import('./produto4/produto4.module').then( m => m.Produto4PageModule)
   }
 
 ];
