@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { BehaviorSubject } from 'rxjs';
 
 export interface Revendedor{
   cep: string;
@@ -13,29 +14,31 @@ export interface Revendedor{
 })
 export class LocalCepService {
 
+  private revendedores: Revendedor[] = [];
+  private revendedorSubject: BehaviorSubject<Revendedor[]> = new BehaviorSubject([]);
+  public revendedorStream = this.revendedorSubject.asObservable();
+
   constructor (private storage: Storage) { 
     this.loadFromStorage();
   }
   
+  public addRevendedor(newRevendedor: Revendedor){
+    this.revendedores.push(newRevendedor);
+    this.saveAtStorage();
+  }
+
   private async loadFromStorage(){
-    const storedRevendedor = await this.storage.get('revendedores');
-    if (storedRevendedor){
-      this.revendedores.push(...storedRevendedor);
+    const loadedRevendedor : Revendedor[] | null = await this.storage.get('revendedores');
+    if (loadedRevendedor){
+      this.revendedores.push(...loadedRevendedor);
     }
   }
 
-  public all (){
-    return this.revendedores;
+  private saveAtStorage (){
+    this.storage.set('revendedores', this.revendedores);
   }
 
-  public revendedores: Revendedor[] = [
-    { cep: '02440-070', name: 'Ana Machado', phone: '(11)98877-6655', distance: '1.3km' },
-    { cep: '024040-070', name: 'Jorge Oliveira Junior', phone: '(11)96655-8877', distance: '2.1km' },
-    { cep: '03118-040', name: 'Roberto da Silva Santos', phone: '(11)91122-3344', distance: '10km'},
-    { cep: '03118-040', name: 'Marcela Ferraz Barbosa', phone: '(11)93344-1122', distance: '7.3km'}
-  ] 
-
-  public find(cep:string): Revendedor{
+  public findRevendedorByCep(cep:string){
     return {...this.revendedores.find( r => r.cep === cep)}
   }
 

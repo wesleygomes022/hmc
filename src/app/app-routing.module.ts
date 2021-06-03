@@ -49,6 +49,14 @@ const routes: Routes = [
   {
     path: 'sacola',
     loadChildren: () => import('./sacola/sacola.module').then( m => m.SacolaPageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
   }
 
 ];

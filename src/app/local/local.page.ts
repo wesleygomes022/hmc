@@ -16,7 +16,7 @@ export interface Revendedor{
 })
 
 export class LocalPage {
-  public revendedores: Revendedor [] = this.localCepService.revendedores;
+  //public revendedor: Revendedor [] = this.localCepService;
   
 
   constructor(private localCepService: LocalCepService) { }
