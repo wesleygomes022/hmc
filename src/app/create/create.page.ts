@@ -21,7 +21,8 @@ export class CreatePage {
               private navController: NavController) { }
 
   addNewRevendedor(){
-    this.localcepservice.addRevendedor(this.newRevendedor);
-    this.navController.back();
+    /*this.localcepservice.addRevendedor(this.newRevendedor);
+    this.navController.back();*/
+    console.log('Salvando', this.newRevendedor);
   }
 }

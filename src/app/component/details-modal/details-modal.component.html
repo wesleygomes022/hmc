@@ -1,6 +1,13 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/local"></ion-back-button>
+    </ion-buttons>
+    <img src="assets/LOGO.png" class="logo ion-image-center">
+    <ion-icon name="bag-handle-outline" size="large" class="checkoutIcon" [routerLink]="['/product-list']"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
       <ion-button (click)="closeModal()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
       </ion-button>
@@ -16,19 +23,15 @@
     <ion-card-content>
       <ion-row class="ion-align-items-center">
         <ion-col size="auto" class="ion-margin-end">
-          <ion-avatar>
-            <img [src]="'//github.com/'+contact.user+'.png'" />
-          </ion-avatar>
         </ion-col>
         <ion-col>
-          <h1>{{contact.name}}</h1>
-          <h2>{{contact.user}}</h2>
+          <h1>{{revendedor.cep}}</h1>
+          <h2>{{revendedor.name}}</h2>
+          <h3>{{revendedor.phone}}</h3>
+          <h4>{{revendedor.distance}}</h4>
         </ion-col>
       </ion-row>
-      <ion-button (click)="closeModal()" [routerLink]="['/edit', contact.user]" expand="block" fill="clear">
-        <ion-icon slot="start" name="create"></ion-icon>
-        Editar
-      </ion-button>
+
       <ion-button (click)="closeModal()" expand="block" fill="clear">
         <ion-icon slot="start" name="close"></ion-icon>
         Fechar

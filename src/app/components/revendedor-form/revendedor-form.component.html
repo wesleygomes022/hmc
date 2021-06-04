@@ -1,0 +1,29 @@
+<ion-toolbar>Seja um Revendedor</ion-toolbar>
+
+<ion-content >
+  <ion-list>
+    
+    <ion-item>
+    <ion-label position="floating">CEP</ion-label>
+    <ion-input [(ngModel)]="revendedor.cep" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="revendedor.name" type="text"></ion-input>
+      </ion-item>
+      
+    <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input [(ngModel)]="revendedor.phone" type="text"></ion-input>
+        </ion-item>
+
+    <ion-item>
+          <ion-label position="floating">Distancia</ion-label>
+          <ion-input [(ngModel)]="revendedor.distance" type="text"></ion-input>
+          </ion-item>
+
+    <ion-button (click)= "saved.emit()" expand = "block">
+      Salvar
+    </ion-button>
+  </ion-list>
