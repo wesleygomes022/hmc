@@ -57,6 +57,14 @@ const routes: Routes = [
   {
     path: 'create',
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'component',
+    loadChildren: () => import('./component/component.module').then( m => m.ComponentPageModule)
+  },
+  {
+    path: 'component',
+    loadChildren: () => import('./component/component.module').then( m => m.ComponentPageModule)
   }
 
 ];

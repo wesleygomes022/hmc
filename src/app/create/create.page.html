@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/local"></ion-back-button>
+    </ion-buttons>
+    <img src="assets/LOGO.png" class="logo ion-image-center">
+    <ion-icon name="bag-handle-outline" size="large" class="checkoutIcon" [routerLink]="['/product-list']"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <app-revendedor-form [revendedor]="newRevendedor" (saved)="addNewRevendedor()"></app-revendedor-form>
 </ion-content>
