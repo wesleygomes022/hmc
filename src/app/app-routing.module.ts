@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'produto2',
     loadChildren: () => import('./produto2/produto2.module').then( m => m.Produto2PageModule)
-  },  {
+  },
+  {
     path: 'local',
     loadChildren: () => import('./local/local.module').then( m => m.LocalPageModule)
   },
@@ -50,10 +51,7 @@ const routes: Routes = [
     path: 'sacola',
     loadChildren: () => import('./sacola/sacola.module').then( m => m.SacolaPageModule)
   },
-  {
-    path: 'edit',
-    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
-  },
+
   {
     path: 'create',
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
