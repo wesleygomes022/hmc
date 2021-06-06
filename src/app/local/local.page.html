@@ -15,7 +15,7 @@
   </ion-card-header>
   
   <ion-searchbar [(ngModel)]="search" (ionChange)="updateSearch()"></ion-searchbar>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0658301189032!2d-46.65298398440665!3d-23.566079067653124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621470533600!5m2!1spt-BR!2sbr" width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0658301189032!2d-46.65298398440665!3d-23.566079067653124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621470533600!5m2!1spt-BR!2sbr" width="380" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
  
   <div class="buttonRevendedor">
     
@@ -24,24 +24,15 @@
 
   <ion-content>
     <ion-list>
+      
       <ion-item *ngFor="let revendedor of revendedores">
       <ion-label>
         <h1>Nome</h1>
         <p>Distancia do Revendedor</p>
       </ion-label>
-    </ion-list>
-    </ion-item>
-    </ion-content>
-    </ion-content>
+</ion-item>
+</ion-list>
 
-    
-        
-        <ion-label>
-          <h1>{{revendedor.name}}</h1>
-          <p>{{revendedor.cep}}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
   
   </ion-content>
 

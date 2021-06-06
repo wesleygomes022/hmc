@@ -16,7 +16,7 @@ import { DetailsModalComponent } from '../component/details-modal/details-modal.
 export class LocalPage {
   public revendedores: Revendedor [];
  
-  //public revendedorStream: Observable<Revendedor[]>;
+  public revendedorStream: Observable<Revendedor[]>;
   public search = '';
   public searchStream = new BehaviorSubject('');
 
