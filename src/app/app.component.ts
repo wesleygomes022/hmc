@@ -1,5 +1,6 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import {Router} from '@angular/router'; 
 
 @Component({
   selector: 'app-root',
@@ -7,23 +8,10 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor (private storage: Storage){}
+  constructor (private storage: Storage, public router: Router){}
 
   async ngOnInit() {
     await this.storage.create();
   }
-
-  public appPages = [
-
-    { title: 'Perfumaria'},
-    { title: 'Perfumaria Masculina', url: '/folder/PerfumariaMasculina' },
-    { title: 'Perfumaria Feminina', url: '/folder/PerfumariaFeminina' },
-    { title: 'Perfumaria Infantil', url: '/folder/PerfumariaInfantil' },
-    { title: 'Aromatizador'},
-    { title: 'Aromatizador Ambiente', url: '/folder/AromatizadorAmbiente' },
-    { title: 'Aromatizador Automotivo', url: '/folder/AromatizadorAutomotivo' },
-    
-  ];
-  
   
 }

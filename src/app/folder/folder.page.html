@@ -16,7 +16,18 @@
   </ion-header>
 
   <img src="assets/home.png" class="imagem">
-  
+        
+      <ion-row>
+        <ion-col>
+        <img src="assets/perfume.jpg" class="img1"  [routerLink]="['/product-list']">
+         
+        </ion-col>
+        <ion-col>
+        <img src="assets/aroma.jpg" class="img2"  [routerLink]="['/product-list2']">
+        
+        </ion-col>
+      </ion-row>
+
         <div class= "tag">
         <ion-text class="text3"><strong>Descontos<br></strong></ion-text>
         <ion-icon name="pricetag-outline" size="large" class="tagIcon"></ion-icon>
@@ -42,13 +53,13 @@
         <img src="assets/aroma2.jpg" class="imagem2" [routerLink]="['/produto3']"><br>
         <ion-text><strong>Aromatizador Lavanda<br></strong></ion-text>
         <ion-text class="text2">REF: 9922774<br></ion-text>
-        <ion-text>R$ 30,00</ion-text>
+        <ion-text>R$ 25,00</ion-text>
       </ion-col>
       <ion-col>
         <img src="assets/aroma3.jpg" class="imagem2" [routerLink]="['/produto3']"><br>
         <ion-text><strong>Aromatizador Lavanda<br></strong></ion-text>
         <ion-text class="text2">REF: 9922774<br></ion-text>
-        <ion-text>R$ 30,00</ion-text>
+        <ion-text>R$ 25,00</ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>
